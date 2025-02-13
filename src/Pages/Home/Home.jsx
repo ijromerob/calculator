@@ -6,11 +6,10 @@ import Calculator from '../../Components/Calculator/Calculator';
 import Result from '../../Components/Result/Result';
 
 const Home = () => {
-  const [result, setResult] = useState(0);
+  const [result, setResult] = useState(false);
 
   return (
     <div>
-      <div>hello here</div>
       <Calculator setResult={setResult} />
       <Result result={result} />
     </div>
