@@ -10,6 +10,7 @@ const Home = () => {
 
   return (
     <div>
+      <div>hello here</div>
       <Calculator setResult={setResult} />
       <Result result={result} />
     </div>
