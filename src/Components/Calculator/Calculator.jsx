@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { calculateAll } from '../../assets/logic';
-import './calculator.css';
+import './Calculator.css';
 
 function Calculator({ setResult }) {
   const [isMetric, setIsMetric] = useState(true);
