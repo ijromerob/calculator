@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -18,31 +18,38 @@ const Navbar = () => {
         </button>
         <ul className={isMobileMenuOpen ? 'nav-menu active' : 'nav-menu'}>
           <li>
-            <Link
+            <NavLink
               to="/"
-              className="navLinks"
+              end
+              className={({ isActive }) =>
+                'navLinks ' + (isActive ? 'active-link' : '')
+              }
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/about"
-              className="navLinks"
+              className={({ isActive }) =>
+                'navLinks ' + (isActive ? 'active-link' : '')
+              }
               onClick={() => setIsMobileMenuOpen(false)}
             >
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link
+            <NavLink
               to="/contact"
-              className="navLinks"
+              className={({ isActive }) =>
+                'navLinks ' + (isActive ? 'active-link' : '')
+              }
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </div>

@@ -1,0 +1,35 @@
+h1 {
+  text-align: center;
+}
+
+.modes {
+  border: 1px solid white;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px;
+}
+
+h4 {
+  color: white;
+}
+
+.results {
+  margin-bottom: 110px;
+}
+
+@media screen and (min-width: 768px) {
+  .results {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+  }
+
+  h1 {
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+  }
+
+  .modes {
+    padding: 2px;
+  }
+}

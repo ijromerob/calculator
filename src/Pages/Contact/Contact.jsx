@@ -2,7 +2,7 @@
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contact page">
       <h1>Contact</h1>
       <p>
         I’m Ivan Romero, I’m a software development student at Brigham Young

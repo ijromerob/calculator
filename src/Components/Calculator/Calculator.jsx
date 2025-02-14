@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { calculateAll } from '../../assets/logic';
+import './calculator.css';
 
 function Calculator({ setResult }) {
   const [isMetric, setIsMetric] = useState(true);
@@ -9,31 +10,35 @@ function Calculator({ setResult }) {
     <>
       <form
         onSubmit={(e) => {
-          setResult(calculateAll(isMetric, e.target[1].value));
           e.preventDefault();
+          setResult(calculateAll(isMetric, distance));
         }}
       >
+        <label>Units:</label>
         <label className="switch">
-          Units:
           <input
             type="checkbox"
             onChange={(e) => {
               setIsMetric(!e.target.checked);
             }}
           />
-          <span className="slider round">{isMetric ? 'Metric' : 'Miles'}</span>
+          <span className="slider round"></span>
         </label>
-        <label>
-          <input
-            type="number"
-            name="distance"
-            placeholder={isMetric ? 'Distance in Km' : 'Distance in Miles'}
-            onChange={(a) => setDistance(a.target.value)}
-            value={distance}
-            required
-          />
-        </label>
-        <button type="submit">Calculate</button>
+        <label>{isMetric ? ' Metric' : ' Imperial'}</label>
+        <fieldset className="bar">
+          <label>
+            <input
+              type="number"
+              name="distance"
+              placeholder={isMetric ? 'Distance in Km' : 'Distance in Miles'}
+              onChange={(a) => setDistance(a.target.value)}
+              value={distance}
+              className="distanceInput inputBar"
+              required
+            />
+          </label>
+          <button type="submit inputBar">Calculate</button>
+        </fieldset>
       </form>
     </>
   );

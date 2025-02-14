@@ -2,6 +2,9 @@
   background-color: var(--primary-color);
   color: var(--nav-text-color);
   padding: 0 1rem;
+  font-weight: bold;
+
+  text-transform: uppercase;
 }
 
 /* Container to help position the elements */
@@ -32,6 +35,11 @@
 /* Hide menu items on mobile by default */
 .nav-menu li {
   padding: 1rem 2rem;
+}
+
+/* Style for active navigation links (wayfinder) */
+.navLinks.active-link {
+  background-color: #013874;
 }
 
 /* Responsive styles */

@@ -1,4 +1,5 @@
 // This will be the footer of the website
+import './Footer.css';
 
 const Footer = () => {
   return (
