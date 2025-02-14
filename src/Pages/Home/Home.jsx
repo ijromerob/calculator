@@ -9,7 +9,7 @@ const Home = () => {
   const [result, setResult] = useState(false);
 
   return (
-    <div>
+    <div className="home page">
       <Calculator setResult={setResult} />
       <Result result={result} />
     </div>

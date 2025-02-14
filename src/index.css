@@ -1,0 +1,6 @@
+@media screen and (min-width: 768px) {
+  .page {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}

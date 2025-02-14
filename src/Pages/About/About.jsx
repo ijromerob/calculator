@@ -2,7 +2,7 @@
 
 const About = () => {
   return (
-    <div className="about">
+    <div className="about page">
       <h1>About This Transportation Emissions Calculator</h1>
       <p>
         This project was born to help individuals understand the environmental
