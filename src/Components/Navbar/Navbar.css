@@ -1,0 +1,60 @@
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--nav-text-color);
+  padding: 0 1rem;
+}
+
+/* Container to help position the elements */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Hide the hamburger button on larger screens */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--nav-text-color);
+  cursor: pointer;
+}
+
+/* Base styles for the navigation menu */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-basis: auto;
+}
+
+/* Hide menu items on mobile by default */
+.nav-menu li {
+  padding: 1rem 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in;
+  }
+
+  /* When active, show the menu */
+  .nav-menu.active {
+    max-height: 300px; /* Adjust value as needed */
+  }
+
+  .nav-menu li {
+    text-align: center;
+    padding: 1rem;
+  }
+}

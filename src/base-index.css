@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'DM sans';
+}
+
+:root {
+  --primary-color: #002c5a;
+  --secondary-color: #000000;
+  --accent-color1: #ffcc00;
+  --accent-color2: #ffffff;
+
+  --navigation-and-footer: var(var(--secondary-color));
+  --nav-text-color: var(--accent-color2);
+  --text-body-color: var(--accent-color1);
+}
+
+body {
+  font-family: 'roboto', sans-serif, 'verdana', 'tahoma';
+  background-color: var(--secondary-color);
+  color: var(--text-body-color);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar {
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--nav-text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--nav-text-color);
+}
+
+li {
+  padding: 1rem 2rem;
+}
+.navLinks {
+  padding: 1rem 2rem;
+  height: 100%;
+}
